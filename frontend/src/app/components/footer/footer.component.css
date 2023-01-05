@@ -7,6 +7,7 @@
     color: #1a1a1a;
     bottom: 0;
     left: 0;
+    margin-top: auto;
     position: sticky;
     z-index: 999;
     width: 100%;

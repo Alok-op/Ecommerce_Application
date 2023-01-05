@@ -1,19 +1,17 @@
 <section class="header">
-    <a class="logo" href="#">Fashion</a>
+    <a class="logo" href="#">on</a>
     <div>
         <ul class="navbar">
             <li><a class="active" href="#">Men</a></li>
             <li><a href="#">Women</a></li>
-            <li><a href="k#">Kids</a></li>
+            <li><a href="#">Kids</a></li>
             <li><a href="#">Home & Living</a></li>
             <li><a href="#">Beauty</a></li>
         </ul>
     </div>
     <div>
-        <ul class="navbar">
-            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-            <li><a href="#">Log In</a></li>
-            <li><a href="#">Sign Up</a></li>
-        </ul>
+        <button type="button" class="button" (click)="navigateToLogin()">Login</button>
+        <button type="button" class="button" (click)="showCard()">Sign Up</button>
     </div>
+    <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
 </section>
