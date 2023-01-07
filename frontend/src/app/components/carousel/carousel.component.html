@@ -1,1 +1,22 @@
-<p>carousel works!</p>
+<div class="slider">
+    <div class="content">
+        <div class="images">
+            <img src="../../../assets/slider1.jpg" alt="">
+            <img src="../../../assets//slider2.jpg" alt="">
+            <img src="../../../assets/slider3.jpg" alt="">
+            <img src="../../../assets/slider4.jpg" alt="">
+        </div>
+        <div class="slide left" (click)="sideSlide(-1)">
+            <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <div class="slide right" (click)="sideSlide(1)">
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+        <div class="btm-slider">
+            <span (click)="btmSlide(1)"></span>
+            <span (click)="btmSlide(2)"></span>
+            <span (click)="btmSlide(3)"></span>
+            <span (click)="btmSlide(4)"></span>
+        </div>
+    </div>
+</div>

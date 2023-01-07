@@ -21,13 +21,6 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(["/profile/sign-up"])
   }
 
-  navigateToProduct(productCategory: any) {
-    console.log(productCategory);
-
-    localStorage.setItem("productCategory", productCategory);
-    this.router.navigate([`/products/${productCategory}`]);
-  }
-
   navigateToHome() {
     this.router.navigate([""]);
   }

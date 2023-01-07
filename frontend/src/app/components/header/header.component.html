@@ -2,11 +2,11 @@
     <a class="logo" (click)="navigateToHome()">Fashion</a>
     <div>
         <ul class="navbar">
-            <li><a class="active" (click)="navigateToProduct('men')">Men</a></li>
-            <li><a (click)="navigateToProduct('women')">Women</a></li>
-            <li><a (click)="navigateToProduct('kids')">Kids</a></li>
-            <li><a (click)="navigateToProduct('home-&-living')">Home & Living</a></li>
-            <li><a (click)="navigateToProduct('beauty')">Beauty</a></li>
+            <li><a routerLink="/products/men" [routerLinkActive]="['active']">Men</a></li>
+            <li><a routerLink="/products/women" [routerLinkActive]="['active']">Women</a></li>
+            <li><a routerLink="/products/kids" [routerLinkActive]="['active']">Kids</a></li>
+            <li><a routerLink="/products/home-&-living" [routerLinkActive]="['active']">Home & Living</a></li>
+            <li><a routerLink="/products/beauty" [routerLinkActive]="['active']">Beauty</a></li>
         </ul>
     </div>
     <div>
