@@ -7,19 +7,29 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  isCardShown: boolean = false;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  showCard() {
-    this.isCardShown = true;
-  }
-
   navigateToLogin() {
     this.router.navigate(['/profile/login']);
+  }
+
+  navigateToSignUp() {
+    this.router.navigate(["/profile/sign-up"])
+  }
+
+  navigateToProduct(productCategory: any) {
+    console.log(productCategory);
+
+    localStorage.setItem("productCategory", productCategory);
+    this.router.navigate([`/products/${productCategory}`]);
+  }
+
+  navigateToHome() {
+    this.router.navigate([""]);
   }
 
 }

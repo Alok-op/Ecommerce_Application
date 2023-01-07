@@ -16,6 +16,7 @@ a.logo {
     text-decoration: none;
     color: #1a1a1a;
     font-size: 26px;
+    cursor: pointer;
 }
 
 .navbar {
@@ -43,6 +44,7 @@ a.logo {
     cursor: pointer;
     border-radius: 5px;
     font-weight: 600;
+    font-family: 'Roboto Slab', serif;
 }
 
 .cart span {
@@ -56,6 +58,7 @@ a.logo {
     font-weight: 400;
     color: #1a1a1a;
     transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .navbar li a:hover,

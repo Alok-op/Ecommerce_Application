@@ -1,17 +1,17 @@
 <section class="header">
-    <a class="logo" href="#">on</a>
+    <a class="logo" (click)="navigateToHome()">Fashion</a>
     <div>
         <ul class="navbar">
-            <li><a class="active" href="#">Men</a></li>
-            <li><a href="#">Women</a></li>
-            <li><a href="#">Kids</a></li>
-            <li><a href="#">Home & Living</a></li>
-            <li><a href="#">Beauty</a></li>
+            <li><a class="active" (click)="navigateToProduct('men')">Men</a></li>
+            <li><a (click)="navigateToProduct('women')">Women</a></li>
+            <li><a (click)="navigateToProduct('kids')">Kids</a></li>
+            <li><a (click)="navigateToProduct('home-&-living')">Home & Living</a></li>
+            <li><a (click)="navigateToProduct('beauty')">Beauty</a></li>
         </ul>
     </div>
     <div>
         <button type="button" class="button" (click)="navigateToLogin()">Login</button>
-        <button type="button" class="button" (click)="showCard()">Sign Up</button>
+        <button type="button" class="button" (click)="navigateToSignUp()">Sign Up</button>
     </div>
     <a class="cart" href="#"><i class="fa-solid fa-cart-shopping"></i><span>Cart</span></a>
 </section>

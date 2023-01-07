@@ -1,0 +1,22 @@
+<section class="product1 section-p1">
+    <h2>Women Products</h2>
+    <p>Summer Collection New Modern Design</p>
+    <div class="pro-container">
+        <div class="pro" *ngFor="let product of productList">
+            <img src="{{product.productImage}}" alt="">
+            <div class="des">
+                <span>{{product.productBrand}}</span>
+                <h5>{{product.productName}}</h5>
+                <div class="star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h4>{{product.productPrice}}</h4>
+            </div>
+            <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+        </div>
+    </div>
+</section>

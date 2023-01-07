@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  selector: 'app-kids',
+  templateUrl: './kids.component.html',
+  styleUrls: ['./kids.component.css']
 })
-export class ProductsComponent implements OnInit {
+export class KidsComponent implements OnInit {
   productList: any = [];
   constructor() { }
 
