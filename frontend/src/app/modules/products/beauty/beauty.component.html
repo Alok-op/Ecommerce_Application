@@ -3,8 +3,8 @@
     <p>Summer Collection New Modern Design</p>
     <div class="pro-container">
         <div class="pro" *ngFor="let product of productList">
-            <img src="{{product.productImage}}" alt="">
-            <div class="des">
+            <img src="{{product.productImage}}">
+            <div class="des" (click)="navigateToProductDetails()">
                 <span>{{product.productBrand}}</span>
                 <h5>{{product.productName}}</h5>
                 <div class="star">

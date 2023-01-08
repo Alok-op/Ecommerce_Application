@@ -10,10 +10,10 @@ export class CarouselComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    setInterval(() => {
-      this.sideSlide(1);
-    }, 2500);
-    this.showImg(this.indexValue);
+    // setInterval(() => {
+    //   this.sideSlide(1);
+    // }, 2500);
+    // this.showImg(this.indexValue);
   }
 
   btmSlide(e: any) {

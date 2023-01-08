@@ -4,6 +4,7 @@ import { BeautyComponent } from './beauty/beauty.component';
 import { HomeAndLivingComponent } from './home-and-living/home-and-living.component';
 import { KidsComponent } from './kids/kids.component';
 import { MensComponent } from './mens/mens.component';
+import { ProductDetailsComponent } from './product-details/product-details.component';
 import { WomenComponent } from './women/women.component';
 
 const routes: Routes = [
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: "beauty",
     component: BeautyComponent
+  },
+  {
+    path: "product-details",
+    component: ProductDetailsComponent
   }
 
 ];
