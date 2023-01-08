@@ -1,0 +1,84 @@
+.blog-home h2 {
+    margin: 10px 10px;
+    font-size: 36px;
+}
+
+.shopping-cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: 10px;
+}
+
+.customers td,
+.customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #ffa500;
+    color: white;
+}
+
+.customers input {
+    width: 50px;
+}
+
+.order-summary {
+    margin-right: 10px;
+    width: 17%;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+}
+
+.order-summary h5 {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #e6e3e3;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.summary {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin-left: 15px;
+}
+
+.summary th,
+.summary td {
+    padding: 8px;
+    font-size: 13px;
+    color: gray;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.summary .total th,
+.total td {
+    border-top: 1px solid #ddd;
+    color: #000000;
+    font-weight: bolder;
+}
+
+.order-summary button {
+    color: #ffffff;
+    border: none;
+    background-color: #ed634b;
+    padding: 12px 60px;
+    margin: 0 0 0 10px;
+    font-size: 14px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    cursor: pointer;
+}
