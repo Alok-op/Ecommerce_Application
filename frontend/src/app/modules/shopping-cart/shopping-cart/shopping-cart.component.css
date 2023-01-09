@@ -1,6 +1,12 @@
 .blog-home h2 {
-    margin: 10px 10px;
+    margin: 10px 0 0 5px;
     font-size: 36px;
+}
+
+.blog-home h6 {
+    margin-bottom: 25px;
+    margin-left: 5px;
+    color: #a5a2a2;
 }
 
 .shopping-cart {
@@ -75,7 +81,7 @@
     color: #ffffff;
     border: none;
     background-color: #ed634b;
-    padding: 12px 60px;
+    padding: 12px 65px;
     margin: 0 0 0 10px;
     font-size: 14px;
     font-family: 'Roboto Slab', serif;
