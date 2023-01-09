@@ -1,0 +1,99 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.left {
+    border-right: 1px solid black;
+    width: 50%;
+    text-align: left;
+    margin-left: 10%;
+}
+
+.left .shipping-info {
+    margin-left: 20px;
+}
+
+
+.customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    margin: 10px 0 0 20px;
+}
+
+.customers td,
+.customers th {
+    padding: 3px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #ffa500;
+    color: white;
+}
+
+.right {
+    width: 50%;
+}
+
+.shipping-info {}
+
+
+
+
+.order-summary {
+    margin: 0 20px;
+    padding: 20px 0px;
+    width: 70%;
+    box-sizing: border-box;
+    background-color: #f6f6f6;
+}
+
+.order-summary h5 {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #e6e3e3;
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.summary {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    margin-left: 15px;
+    width: 70%;
+}
+
+.summary th,
+.summary td {
+    padding: 8px;
+    font-size: 13px;
+    color: gray;
+    text-align: left;
+    line-height: 1.8;
+}
+
+.summary .total th,
+.total td {
+    border-top: 1px solid #ddd;
+    color: #000000;
+    font-weight: bolder;
+}
+
+.order-summary button {
+    color: #ffffff;
+    border: none;
+    background-color: #663ee7;
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px 65px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}

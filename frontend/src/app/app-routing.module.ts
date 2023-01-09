@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: "products", loadChildren: () => import("./modules/products/products.module").then(m => m.ProductsModule) },
   { path: "profile", loadChildren: () => import("./modules/profile/profile.module").then(m => m.ProfileModule) },
   { path: "shopping-cart", loadChildren: () => import("./modules/shopping-cart/shopping-cart.module").then(m => m.ShoppingCartModule) },
+  { path: "checkout", loadChildren: () => import("./modules/product-checkout/product-checkout.module").then(m => m.ProductCheckoutModule) },
 ];
 
 @NgModule({
