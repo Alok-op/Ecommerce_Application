@@ -11,6 +11,5 @@ export class ProfileService {
 
   postUser(payload: any) {
     return this.http.post(this.url, payload);
-
   }
 }

@@ -11,6 +11,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class SignupComponent implements OnInit {
   data: any;
   signUpForm: FormGroup;
+  submitted: boolean = false;
 
   constructor(
     private router: Router,
@@ -20,10 +21,11 @@ export class SignupComponent implements OnInit {
 
   ngOnInit(): void {
     this.signUpForm = this.formBuilder.group({
-      userName: ["", Validators.required],
+      name: ["", Validators.required],
       email: ["", Validators.required],
-      passoword: ["", Validators.required],
-      termsAndCondition: ["", Validators.required]
+      password: ["", Validators.required],
+      confirmPassword: ["", Validators.required],
+      termsAndCondition: [true],
     })
   }
 
@@ -32,11 +34,16 @@ export class SignupComponent implements OnInit {
   }
 
   saveUserData() {
-    console.log(this.signUpForm.value);
-    return
-    this.profileService.postUser(this.data).subscribe((response) => {
-      console.log(response);
-    })
+    this.submitted = true;
+    if (this.signUpForm.valid) {
+      this.profileService.postUser(this.signUpForm.value).subscribe({
+        next: data => {
+          console.log(data);
+        },
+        error: error => {
+          console.log(error);
+        }
+      })
+    }
   }
-
 }

@@ -1,37 +1,44 @@
 <div class="wrapper">
     <h2>Sign Up</h2>
-    <form>
+    <form [formGroup]="signUpForm">
         <div class="input-group">
             <div class="input-box">
-                <input type="text" placeholder="Full Name" class="name">
+                <input type="text"
+                    [ngClass]="{'is-invalid is-invalid-icon' : submitted && signUpForm.controls['name'].errors}"
+                    formControlName="name" placeholder="Full Name" class="name">
                 <i class="fa fa-user icon"></i>
             </div>
         </div>
         <div class="input-group">
             <div class="input-box">
-                <input type="email" placeholder="Email Adress" class="name">
+                <input type="email"
+                    [ngClass]="{'is-invalid is-invalid-icon' : submitted && signUpForm.controls['email'].errors}"
+                    formControlName="email" placeholder="Email Adress" class="name">
                 <i class="fa fa-envelope icon"></i>
             </div>
         </div>
         <div class="input-group">
             <div class="input-box">
-                <input type="password" placeholder="Enter Password" class="name">
+                <input type="password"
+                    [ngClass]="{'is-invalid is-invalid-icon' : submitted && signUpForm.controls['password'].errors}"
+                    formControlName="password" placeholder="Enter Password" class="name">
                 <i class="fa-solid fa-lock icon"></i>
             </div>
         </div>
         <div class="input-group">
             <div class="input-box">
-                <input type="password" placeholder="Enter Confirm Password" class="name">
+                <input type="password"
+                    [ngClass]="{'is-invalid is-invalid-icon' : submitted && signUpForm.controls['confirmPassword'].errors}"
+                    formControlName="confirmPassword" placeholder="Enter Confirm Password" class="name">
                 <i class="fa fa-lock icon"></i>
             </div>
         </div>
         <div class="input-group">
-            <input type="checkbox" class="checkbox">
-            <label class="terms">I agree with the <strong>Terms and Conditions</strong></label>
+            <label class="terms">By registering, you agree to the <strong>privacy policy</strong></label>
         </div>
         <div class="input-group">
             <div class="input-box">
-                <button type="submit">Sign Up</button>
+                <button type="submit" (click)="saveUserData()">Sign Up</button>
             </div>
         </div>
         <div class="input-group link">
