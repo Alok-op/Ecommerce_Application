@@ -39,6 +39,31 @@ class UserController {
         }
     }
 
+    static userLogin = async (req, res) => {
+        try {
+            const { email, password } = req.body;
+            if (email && password) {
+                const user = await UserModel.findOne({ email: email });
+                if (user) {
+                    const isMatch = await bcrypt.compare(password, user.password);
+                    if ((user.email === email) && isMatch) {
+                        // Generate JWT token
+                        const token = jwt.sign({ userID: user._id }, process.env.JWT_SECRET_KEY, { "expiresIn": "5d" });
+                        res.send({ "status": "success", "message": "Login success", "token": token });
+                    } else {
+                        res.send({ "status": "failed", "message": "Email or Password is not valid" });
+                    }
+                } else {
+                    res.send({ "status": "failed", "message": "You are not a registered user" });
+                }
+            } else {
+                res.send({ "status": "failed", "message": "All fields are required" });
+            }
+        } catch (error) {
+            res.send({ "status": "failed", "message": "Unable to login" });
+        }
+    }
+
 }
 
 export default UserController;

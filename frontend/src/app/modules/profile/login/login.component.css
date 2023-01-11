@@ -84,6 +84,11 @@ h4 {
     border: 1px solid #7ed321;
 }
 
+.is-invalid {
+    box-shadow: 0 0 2px 1px #ec0a0a80;
+    border: 1px solid #d33c21;
+}
+
 .input-box .icon {
     width: 48px;
     display: flex;

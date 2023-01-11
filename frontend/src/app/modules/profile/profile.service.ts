@@ -5,11 +5,15 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProfileService {
-  url = "http://localhost:8000/api/user/register";
+  url = "http://localhost:8000/api/user";
 
   constructor(private http: HttpClient) { }
 
   postUser(payload: any) {
-    return this.http.post(this.url, payload);
+    return this.http.post(`${this.url}/register`, payload);
+  }
+
+  postLoginUser(payload: any) {
+    return this.http.post(`${this.url}/login`, payload);
   }
 }

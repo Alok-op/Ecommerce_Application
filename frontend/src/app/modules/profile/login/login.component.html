@@ -1,17 +1,21 @@
 <div class="wrapper">
     <h2>Login</h2>
-    <form>
+    <form [formGroup]="loginForm">
         <div class="input-group">
         </div>
         <div class="input-group">
             <div class="input-box">
-                <input type="email" placeholder="Email Adress" class="name">
+                <input type="email"
+                    [ngClass]="{'is-invalid is-invalid-icon' : submitted && loginForm.controls['email'].errors}"
+                    formControlName="email" placeholder="Email Adress" class="name">
                 <i class="fa fa-envelope icon"></i>
             </div>
         </div>
         <div class="input-group">
             <div class="input-box">
-                <input type="password" placeholder="Enter Password" class="name">
+                <input type="password"
+                    [ngClass]="{'is-invalid is-invalid-icon' : submitted && loginForm.controls['password'].errors}"
+                    formControlName="password" placeholder="Enter Password" class="name">
                 <i class="fa-solid fa-lock icon"></i>
             </div>
         </div>
@@ -20,7 +24,7 @@
         </div>
         <div class="input-group">
             <div class="input-box">
-                <button type="submit">Login</button>
+                <button type="submit" (click)="userLogin()">Login</button>
             </div>
         </div>
         <div class="input-group link">
